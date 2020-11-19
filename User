@@ -1,0 +1,32 @@
+package Fengzhuang;
+
+/**
+ * 关于函数的封装
+ */
+
+
+public class User {
+    //属性私有化
+    private int age;
+
+    //set方法没有返回值，因为set方法只负责修改数据
+//    public void setAge(int age){
+//        age = age; //java有就近原则，这里并没有给age属性赋值，这里的age都是局部变量age
+//    }
+
+    //setter
+    public void setAge(int a){
+        //编写业务逻辑代码进行安全控制
+        //age = a;
+
+        if(a<0 || a>150){
+            System.out.println("对不起，您提供的年龄不合法。");
+            return;
+        }
+    }
+
+    //getter
+    public int getAge(){
+        return age;
+    }
+}
